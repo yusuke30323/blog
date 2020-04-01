@@ -1,0 +1,48 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="wrapper">
+    <img class='map' src="{% static 'website/img/map.jpg' %}" alt="" >
+    {% include "website/snippets/nav.html" %}
+    <div class="home">
+      <div class="main-images">
+        <div class="parent1 parent">
+          <img class='main-image main1' src="{% static 'website/img/img1.jpg' %}" alt="" >
+          <div class="name1">U.S.A PHOTO GALLERY</div>
+        </div>
+        <div class="parent2 parent">
+          <img class='main-image main2' src="{% static 'website/img/img2.jpg' %}" alt="" >
+          <div class="name2">THE ULTIMATE TRAVEL PACKING LIST</div>
+        </div>
+        <div class="parent3 parent">
+          <img class='main-image main3' src="{% static 'website/img/img3.jpg' %}" alt="" >
+          <div class="name3">HOSTEL</div>
+        </div>
+        <div class="parent4 parent">
+          <img class='main-image main4' src="{% static 'website/img/img4.jpg' %}" alt="" >
+          <div class="name4">SNS</div>
+        </div>
+      </div>
+
+
+      <h1 class="mb-4 mb-title">-- BLOG --</h1>
+      <div class="row">
+        <main class="col-md-8 grid">
+          {% include "website/snippets/main_post_list.html" %}
+        </main>
+        <aside class="col-md-4">
+          {% include "website/snippets/sidebar.html" %}
+        </aside>
+      </div>
+    </div>
+    <footer>
+        <p>© All rights reserved by yusuke</p>
+    </footer>
+  </div>
+</div>
+
+{% endblock %}

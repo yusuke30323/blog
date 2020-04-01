@@ -1,0 +1,25 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="wrapper">
+
+{% include "website/snippets/nav.html" %}
+<div class="home">
+
+<h1>タグ一覧</h1>
+<ul>
+  {% for tag in object_list %}
+  <li><a href="{% url 'website:tag_post' tag.slug %}">{{ tag.name }} ({{ tag.num_posts }})</a></li>  {% empty %}
+  <li>タグはありません。</li>
+  {% endfor %}
+</ul>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

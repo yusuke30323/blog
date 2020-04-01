@@ -1,0 +1,27 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="wrapper">
+
+    {% include "website/snippets/nav.html" %}
+    <div class="home">
+
+      <h1>カテゴリ一覧</h1>
+      <ul>
+        {% for category in object_list %}
+        <li><a href="{% url 'website:category_post' category.slug %}">{{ category.name }} ({{ category.num_posts }})</a></li>  {% empty %}
+        <li>カテゴリはありません。</li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
