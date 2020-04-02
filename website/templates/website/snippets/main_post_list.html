@@ -1,7 +1,7 @@
 {% load static %}
 
 
-{% for post in object_list %}
+<!-- {% for post in object_list %} -->
 {% if user.is_authenticated or post.is_public %}
 
 <div class="card mb-3">
@@ -22,6 +22,6 @@
 </div>
 
 {% endif %}
-{% empty %}
+<!--{% empty %}-->
 <p>まだ投稿はありません。</p>
-{% endfor %}
+<!--{% endfor %}-->
