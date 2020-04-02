@@ -2,7 +2,6 @@
 
 
 {% for post in object_list %}
-{% if user.is_authenticated or post.is_public %}
 
 <div class="card mb-3">
   {% if post.image %}
@@ -21,5 +20,4 @@
   </div>
 </div>
 
-{% endif %}
 {% endfor %}
